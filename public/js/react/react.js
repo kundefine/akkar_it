@@ -2051,7 +2051,7 @@ var Customers = function Customers() {
             })]
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("tbody", {
-          children: customerData.map(function (customer) {
+          children: customerData.length ? customerData.map(function (customer) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("tr", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
                 children: customer.id
@@ -2069,6 +2069,12 @@ var Customers = function Customers() {
                 children: customer.gender
               })]
             }, customer.id);
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("tr", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
+              colspan: "6",
+              className: "text-center",
+              children: "No Customer Found"
+            })
           })
         })]
       })]

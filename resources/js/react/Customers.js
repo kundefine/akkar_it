@@ -139,17 +139,23 @@ const Customers = () => {
                     </thead>
                     <tbody>
 
-                    {customerData.map(customer => (
-                        <tr key={customer.id}>
-                            <td>{customer.id}</td>
-                            <td>{customer.branch_id}</td>
-                            <td>{customer.first_name}</td>
-                            <td>{customer.last_name}</td>
-                            <td>{customer.email}</td>
-                            <td>{customer.phone}</td>
-                            <td>{customer.gender}</td>
+                    {
+                        customerData.length ? customerData.map(customer => (
+                            <tr key={customer.id}>
+                                <td>{customer.id}</td>
+                                <td>{customer.branch_id}</td>
+                                <td>{customer.first_name}</td>
+                                <td>{customer.last_name}</td>
+                                <td>{customer.email}</td>
+                                <td>{customer.phone}</td>
+                                <td>{customer.gender}</td>
+                            </tr>
+                        ))
+                        : <tr>
+                            <td colspan="6" className="text-center">No Customer Found</td>
                         </tr>
-                    ))}
+                    }
+
 
 
                     </tbody>
