@@ -10,6 +10,8 @@ cp .env.example .env
 DB_DATABASE=dbname
 DB_USERNAME=root
 DB_PASSWORD=
+
+QUEUE_CONNECTION=database
 ```
 
 
@@ -22,5 +24,7 @@ composer install
 php artisan key:generate
 php artisan migrate
 npm install && npm run dev
+php artisan queue:table
 php artisan migrate
+php artisan queue:work
 ```
